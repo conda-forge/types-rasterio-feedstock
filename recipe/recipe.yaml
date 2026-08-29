@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   python_min: "3.12"
-  version: "1.5.0.20260810"
+  version: "1.5.1.20260819"
 
 package:
   name: types-rasterio
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/types-rasterio/types_rasterio-${{ version }}.tar.gz
-  sha256: 45e2e43dc5c97eeaf2f3c9f8b89b3d269914d1cf2a0a2c32e6fe029ee79dd5e6
+  sha256: 6cd7efa6dc190bf5b1fe8966413b427bdea308587a93c03cce48a296e805b102
 
 build:
   number: 0
@@ -24,8 +24,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - numpy >=2
+    - affine >=3
     - click >=8
+    - numpy >=2
 
 tests:
   - package_contents:
