@@ -24,8 +24,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - numpy >=2
+    - affine >=3
     - click >=8
+    - numpy >=2
 
 tests:
   - package_contents:
